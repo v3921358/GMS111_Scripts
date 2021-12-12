@@ -1,0 +1,15 @@
+/*
+	名字:	玩具城
+	地圖:	玩具塔101层
+	描述:	221023300
+*/
+
+function enter(pi) {
+	var returnMap = pi.getSavedLocation("MULUNG_TC");
+	if (returnMap < 0) {
+		returnMap = 221023200; // to fix people who entered the fm trough an unconventional way
+		}
+		pi.clearSavedLocation("MULUNG_TC");
+		pi.warp(returnMap, "unityPortal2"); 
+		return true;
+}
